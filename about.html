@@ -20,8 +20,8 @@
         <!-- Menu Desktop -->
         <nav class="hidden md:flex space-x-6 font-medium">
           <a href="index.html" class="hover:text-gray-200">Accueil</a>
-          <a href="xml/sejours.xml" class="hover:text-gray-200">Séjours</a>
-          <a href="xml/destinations.xml" class="hover:text-gray-200"
+          <a href="sejours.html" class="hover:text-gray-200">Séjours</a>
+          <a href="destination.html" class="hover:text-gray-200"
             >Destinations</a
           >
           <a href="panier.html" class="hover:text-gray-200">Panier</a>
@@ -53,8 +53,8 @@
         class="hidden md:hidden px-6 pb-4 space-y-2 font-medium"
       >
         <a href="index.html" class="block hover:text-gray-200">Accueil</a>
-        <a href="xml/sejours.xml" class="block hover:text-gray-200">Séjours</a>
-        <a href="xml/destinations.xml" class="block hover:text-gray-200"
+        <a href="sejours.html" class="block hover:text-gray-200">Séjours</a>
+        <a href="destination.html" class="block hover:text-gray-200"
           >Destinations</a
         >
         <a href="panier.html" class="block hover:text-gray-200">Panier</a>
@@ -63,15 +63,32 @@
     </header>
 
     <!-- Main -->
-    <main class="p-6 max-w-3xl mx-auto mt-6">
-      <h1 class="text-3xl font-bold mb-4">À propos de Yobalou Vacance</h1>
-      <p class="text-gray-700 leading-relaxed">
-        Yobalou Vacance est une plateforme dédiée à la découverte et la
-        réservation de séjours au Sénégal. Notre mission est de vous offrir des
-        expériences uniques, allant des plages paradisiaques aux circuits
-        culturels, tout en facilitant vos réservations.
-      </p>
-    </main>
+
+    <div class="relative w-full h-64 sm:h-96">
+      <img
+        src="assets/images/about.jpg"
+        alt="Séjours"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
+      >
+        <h1
+          class="text-3xl sm:text-4xl font-bold mb-4 text-white drop-shadow-lg"
+        >
+          À propos de Yobalou Vacance
+        </h1>
+        <div class="max-w-3xl text-gray-200 leading-relaxed">
+          <p class="mb-4">
+            Yobalou Vacance est une plateforme dédiée à la découverte et la
+            réservation de séjours au Sénégal. Notre mission est de vous offrir
+            des expériences uniques, allant des plages paradisiaques aux
+            circuits culturels, tout en facilitant vos réservations.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <footer class="bg-gray-800 text-white text-center py-4 mt-10">
       © 2025 Yobalou Vacance

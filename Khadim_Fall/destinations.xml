@@ -6,6 +6,7 @@
     <region>Cap-Vert</region>
     <description>Capitale vibrante avec des marchés et musées.</description>
     <attractions>Île de Gorée, Monument de la Renaissance</attractions>
+    <image>assets/images/dakar.jpg</image>
   </destination>
   <destination>
     <id>2</id>
@@ -13,6 +14,7 @@
     <region>Petite-Côte</region>
     <description>Station balnéaire réputée.</description>
     <attractions>Plages, excursions maritimes</attractions>
+    <image>assets/images/saly.jpg</image>
   </destination>
   <destination>
     <id>3</id>
@@ -20,6 +22,7 @@
     <region>Nord</region>
     <description>Ville classée UNESCO.</description>
     <attractions>Pont Faidherbe, jazz festival</attractions>
+    <image>assets/images/saintlouis.jpg</image>
   </destination>
   <destination>
     <id>4</id>
@@ -27,6 +30,7 @@
     <region>Sud</region>
     <description>Nature luxuriante.</description>
     <attractions>Plages de Cap Skirring</attractions>
+    <image>assets/images/casamance.jpg</image>
   </destination>
   <destination>
     <id>5</id>
@@ -34,5 +38,6 @@
     <region>Dakar</region>
     <description>Lieu historique de mémoire.</description>
     <attractions>Maison des esclaves</attractions>
+    <image>assets/images/goree.jpg</image>
   </destination>
 </destinations>
