@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/xsl/reservation.xsl"?>
+<utilisateurs>
+    <utilisateur>
+        <id>1</id>
+        <nom>Fall</nom>
+        <prenom>Khadim</prenom>
+        <email>khadim.fall@example.com</email>
+        <mot_de_passe>123456</mot_de_passe>
+        <role>utilisateur</role>
+    </utilisateur>
+
+    <utilisateur>
+        <id>2</id>
+        <nom>Gueye</nom>
+        <prenom>Assane</prenom>
+        <email>assane.gueye@example.com</email>
+        <mot_de_passe>abcdef</mot_de_passe>
+        <role>administrateur</role>
+    </utilisateur>
+
+    <utilisateur>
+        <id>3</id>
+        <nom>Diop</nom>
+        <prenom>Awa</prenom>
+        <email>awa.diop@example.com</email>
+        <mot_de_passe>password</mot_de_passe>
+        <role>utilisateur</role>
+    </utilisateur>
+
+    <utilisateur>
+        <id>4</id>
+        <nom>Seck</nom>
+        <prenom>Oumar</prenom>
+        <email>oumar.seck@example.com</email>
+        <mot_de_passe>123abc</mot_de_passe>
+        <role>utilisateur</role>
+    </utilisateur>
+
+    <utilisateur>
+        <id>5</id>
+        <nom>Ndour</nom>
+        <prenom>Fatou</prenom>
+        <email>fatou.ndour@example.com</email>
+        <mot_de_passe>pass123</mot_de_passe>
+        <role>administrateur</role>
+    </utilisateur>
+</utilisateurs>

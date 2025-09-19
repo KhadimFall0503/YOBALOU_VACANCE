@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/xsl/acceuil.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/xml/xsl/sejours.xsl"?>
+
+<sejours>
+    <sejour>
+        <id>1</id>
+        <destination>Dakar</destination>
+        <duree>5</duree>
+        <prix>1200.00</prix>
+        <image>/assets/images/dakar.jpg</image>
+        <disponibilite>Oui</disponibilite>
+        <forfait>
+            <description>Pack découverte : hôtel 4 étoiles + visites guidées de Gorée et du Monument de la Renaissance.</description>
+        </forfait>
+    </sejour>
+
+    <sejour>
+        <id>2</id>
+        <destination>Saly</destination>
+        <duree>7</duree>
+        <prix>1500.00</prix>
+        <image>/assets/images/saly.jpg</image>
+        <disponibilite>Oui</disponibilite>
+        <forfait>
+            <description>Forfait balnéaire : resort en bord de mer avec activités nautiques et soirées culturelles.</description>
+        </forfait>
+    </sejour>
+
+    <sejour>
+        <id>3</id>
+        <destination>Saint-Louis</destination>
+        <duree>6</duree>
+        <prix>1300.00</prix>
+        <image>/assets/images/saintlouis.jpg</image>
+        <disponibilite>Non</disponibilite>
+        <forfait>
+            <description>Forfait culturel : maison d’hôtes typique + visite guidée de la ville et du parc Djoudj.</description>
+        </forfait>
+    </sejour>
+
+    <sejour>
+        <id>4</id>
+        <destination>Cap Skirring</destination>
+        <duree>8</duree>
+        <prix>1800.00</prix>
+        <image>/assets/images/capskirring.jpg</image>
+        <disponibilite>Oui</disponibilite>
+        <forfait>
+            <description>Forfait plage et nature : hébergement en bungalow + activités nautiques et excursions locales.</description>
+        </forfait>
+    </sejour>
+
+    <sejour>
+        <id>5</id>
+        <destination>Île de Gorée</destination>
+        <duree>2</duree>
+        <prix>600.00</prix>
+        <image>/assets/images/goree.jpg</image>
+        <disponibilite>Oui</disponibilite>
+        <forfait>
+            <description>Forfait mémoire : visite guidée de l’île + activités culturelles et ateliers historiques.</description>
+        </forfait>
+    </sejour>
+</sejours>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xml/xsl/acceuil.xsl"?>
+
+<activites>
+    <activite>
+        <id>1</id>
+        <nom>Visite guidée de l’île de Gorée</nom>
+        <lien>1</lien>
+        <prix_supplem>50.00</prix_supplem>
+        <description>Excursion historique sur l’île de Gorée pour découvrir les maisons coloniales et la Maison des Esclaves.</description>
+    </activite>
+
+    <activite>
+        <id>2</id>
+        <nom>Soirée culturelle à Saly</nom>
+        <lien>2</lien>
+        <prix_supplem>30.00</prix_supplem>
+        <description>Soirée traditionnelle avec musique et danse sénégalaise, repas local inclus.</description>
+    </activite>
+
+    <activite>
+        <id>3</id>
+        <nom>Balade en calèche à Saint-Louis</nom>
+        <lien>3</lien>
+        <prix_supplem>25.00</prix_supplem>
+        <description>Découverte de l’architecture coloniale et des rues historiques de Saint-Louis en calèche.</description>
+    </activite>
+
+    <activite>
+        <id>4</id>
+        <nom>Excursion en bateau à Cap Skirring</nom>
+        <lien>4</lien>
+        <prix_supplem>60.00</prix_supplem>
+        <description>Navigation le long de la côte, observation de la faune et visite des villages de pêcheurs.</description>
+    </activite>
+
+    <activite>
+        <id>5</id>
+        <nom>Visite culturelle sur l’Île de Gorée</nom>
+        <lien>5</lien>
+        <prix_supplem>40.00</prix_supplem>
+        <description>Découverte des musées, galeries d’art et monuments historiques de l’île de Gorée.</description>
+    </activite>
+</activites>
