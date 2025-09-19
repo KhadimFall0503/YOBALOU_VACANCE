@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activites>
+  <activite>
+    <id>1</id>
+    <nom>Visite Musée IFAN</nom>
+    <sejourId>1</sejourId>
+    <prix>20</prix>
+  </activite>
+  <activite>
+    <id>2</id>
+    <nom>Plongée sous-marine</nom>
+    <sejourId>2</sejourId>
+    <prix>100</prix>
+  </activite>
+  <activite>
+    <id>3</id>
+    <nom>Balade en pirogue</nom>
+    <sejourId>4</sejourId>
+    <prix>50</prix>
+  </activite>
+  <activite>
+    <id>4</id>
+    <nom>Tour guidé patrimoine</nom>
+    <sejourId>3</sejourId>
+    <prix>30</prix>
+  </activite>
+  <activite>
+    <id>5</id>
+    <nom>Visite Maison des Esclaves</nom>
+    <sejourId>5</sejourId>
+    <prix>10</prix>
+  </activite>
+</activites>

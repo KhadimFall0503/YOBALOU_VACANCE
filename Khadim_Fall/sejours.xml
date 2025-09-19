@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sejours>
+  <sejour>
+    <id>1</id>
+    <destination>Dakar</destination>
+    <duree>5</duree>
+    <prix>1200</prix>
+    <description>Séjour découverte de la capitale avec visites guidées.</description>
+    <image>/assets/images/dakar.jpg</image>
+    <disponibilite>oui</disponibilite>
+  </sejour>
+  <sejour>
+    <id>2</id>
+    <destination>Saly</destination>
+    <duree>7</duree>
+    <prix>1500</prix>
+    <description>Vacances balnéaires dans la station de Saly.</description>
+    <image>/assets/images/saly.jpg</image>
+    <disponibilite>oui</disponibilite>
+  </sejour>
+  <sejour>
+    <id>3</id>
+    <destination>Saint-Louis</destination>
+    <duree>4</duree>
+    <prix>900</prix>
+    <description>Séjour culturel dans la ville historique.</description>
+    <image>/assets/images/saintlouis.jpg</image>
+    <disponibilite>non</disponibilite>
+  </sejour>
+  <sejour>
+    <id>4</id>
+    <destination>Casamance</destination>
+    <duree>6</duree>
+    <prix>1700</prix>
+    <description>Nature et plages de Casamance.</description>
+    <image>/assets/images/casamance.jpg</image>
+    <disponibilite>oui</disponibilite>
+  </sejour>
+  <sejour>
+    <id>5</id>
+    <destination>Île de Gorée</destination>
+    <duree>2</duree>
+    <prix>500</prix>
+    <description>Excursion historique sur l’île de Gorée.</description>
+    <image>/assets/images/goree.jpg</image>
+    <disponibilite>oui</disponibilite>
+  </sejour>
+</sejours>

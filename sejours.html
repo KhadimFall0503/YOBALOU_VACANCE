@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Catalogue Séjours - Yobalou Vacance</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/search.js"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <header class="bg-blue-700 text-white shadow-md">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <div class="text-2xl font-bold tracking-wide">YOBALOU-VACANCE</div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-gray-200">Accueil</a>
+          <a href="xml/sejours.xml" class="hover:text-gray-200">Séjours</a>
+          <a href="xml/destinations.xml" class="hover:text-gray-200"
+            >Destinations</a
+          >
+          <a href="panier.html" class="hover:text-gray-200">Panier</a>
+          <a href="about.html" class="hover:text-gray-200">À propos</a>
+          <a href="contact.html" class="hover:text-gray-200">Contact</a>
+        </nav>
+
+        <!-- Bouton mobile -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden px-6 pb-4 space-y-2 font-medium"
+      >
+        <a href="index.html" class="block hover:text-gray-200">Accueil</a>
+        <a href="xml/sejours.xml" class="block hover:text-gray-200">Séjours</a>
+        <a href="xml/destinations.xml" class="block hover:text-gray-200"
+          >Destinations</a
+        >
+        <a href="panier.html" class="block hover:text-gray-200">Panier</a>
+        <a href="about.html" class="block hover:text-gray-200">À propos</a>
+        <a href="contact.html" class="block hover:text-gray-200">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="relative w-full h-64 sm:h-96">
+      <img
+        src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=2830&h=1500&q=80"
+        alt="Séjours"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
+      >
+        <h1 class="text-3xl sm:text-5xl font-bold text-white">Nos Séjours</h1>
+        <p class="mt-2 text-white text-lg sm:text-xl max-w-2xl">
+          Découvrez nos séjours sur mesure pour explorer le Sénégal et vivre des
+          expériences inoubliables.
+        </p>
+      </div>
+    </div>
+
+    <!-- Recherche -->
+    <div class="max-w-3xl mx-auto mt-6 px-6">
+      <input
+        id="searchInput"
+        onkeyup="searchSejours()"
+        placeholder="Rechercher un séjour..."
+        class="w-full p-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+
+    <!-- Main -->
+    <main class="p-6 max-w-7xl mx-auto mt-6">
+      <div
+        id="sejours-list"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <!-- Transformation XSL ou JS affichera ici -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+      © 2025 Yobalou Vacance
+    </footer>
+
+    <!-- JS menu mobile -->
+  </body>
+</html>

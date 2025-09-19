@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact - Yobalou Vacance</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <header class="bg-blue-700 text-white shadow-md">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo / Titre -->
+        <div class="text-2xl font-bold tracking-wide">YOBALOU-VACANCE</div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-gray-200">Accueil</a>
+          <a href="xml/sejours.xml" class="hover:text-gray-200">Séjours</a>
+          <a href="xml/destinations.xml" class="hover:text-gray-200"
+            >Destinations</a
+          >
+          <a href="panier.html" class="hover:text-gray-200">Panier</a>
+          <a href="about.html" class="hover:text-gray-200">À propos</a>
+          <a href="contact.html" class="hover:text-gray-200">Contact</a>
+        </nav>
+
+        <!-- Bouton mobile -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden px-6 pb-4 space-y-2 font-medium"
+      >
+        <a href="index.html" class="block hover:text-gray-200">Accueil</a>
+        <a href="xml/sejours.xml" class="block hover:text-gray-200">Séjours</a>
+        <a href="xml/destinations.xml" class="block hover:text-gray-200"
+          >Destinations</a
+        >
+        <a href="panier.html" class="block hover:text-gray-200">Panier</a>
+        <a href="about.html" class="block hover:text-gray-200">À propos</a>
+        <a href="contact.html" class="block hover:text-gray-200">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="relative w-full h-64 sm:h-96">
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2830&h=1500&q=80"
+        alt="Contact"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
+      >
+        <h1 class="text-3xl sm:text-5xl font-bold text-white">
+          Contactez YOBALOU-VACANCE
+        </h1>
+        <p class="mt-2 text-white text-lg sm:text-xl max-w-2xl">
+          Nous sommes là pour répondre à toutes vos questions. N’hésitez pas à
+          nous envoyer un message !
+        </p>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <main class="p-6 max-w-3xl mx-auto mt-6">
+      <form class="space-y-4 bg-white p-6 rounded-lg shadow-md">
+        <input
+          type="text"
+          placeholder="Nom"
+          class="border border-gray-300 p-2 w-full rounded"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="border border-gray-300 p-2 w-full rounded"
+        />
+        <textarea
+          placeholder="Votre message"
+          class="border border-gray-300 p-2 w-full rounded h-32"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md font-semibold transition"
+        >
+          Envoyer
+        </button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+      © 2025 Yobalou Vacance
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

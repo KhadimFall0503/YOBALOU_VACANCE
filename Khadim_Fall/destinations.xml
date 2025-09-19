@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<destinations>
+  <destination>
+    <id>1</id>
+    <ville>Dakar</ville>
+    <region>Cap-Vert</region>
+    <description>Capitale vibrante avec des marchés et musées.</description>
+    <attractions>Île de Gorée, Monument de la Renaissance</attractions>
+  </destination>
+  <destination>
+    <id>2</id>
+    <ville>Saly</ville>
+    <region>Petite-Côte</region>
+    <description>Station balnéaire réputée.</description>
+    <attractions>Plages, excursions maritimes</attractions>
+  </destination>
+  <destination>
+    <id>3</id>
+    <ville>Saint-Louis</ville>
+    <region>Nord</region>
+    <description>Ville classée UNESCO.</description>
+    <attractions>Pont Faidherbe, jazz festival</attractions>
+  </destination>
+  <destination>
+    <id>4</id>
+    <ville>Casamance</ville>
+    <region>Sud</region>
+    <description>Nature luxuriante.</description>
+    <attractions>Plages de Cap Skirring</attractions>
+  </destination>
+  <destination>
+    <id>5</id>
+    <ville>Île de Gorée</ville>
+    <region>Dakar</region>
+    <description>Lieu historique de mémoire.</description>
+    <attractions>Maison des esclaves</attractions>
+  </destination>
+</destinations>

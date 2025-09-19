@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>À propos - Yobalou Vacance</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <header class="bg-blue-700 text-white shadow-md">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo / Titre -->
+        <div class="text-2xl font-bold tracking-wide">YOBALOU-VACANCE</div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-gray-200">Accueil</a>
+          <a href="xml/sejours.xml" class="hover:text-gray-200">Séjours</a>
+          <a href="xml/destinations.xml" class="hover:text-gray-200"
+            >Destinations</a
+          >
+          <a href="panier.html" class="hover:text-gray-200">Panier</a>
+          <a href="about.html" class="hover:text-gray-200">À propos</a>
+        </nav>
+
+        <!-- Bouton mobile -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden px-6 pb-4 space-y-2 font-medium"
+      >
+        <a href="index.html" class="block hover:text-gray-200">Accueil</a>
+        <a href="xml/sejours.xml" class="block hover:text-gray-200">Séjours</a>
+        <a href="xml/destinations.xml" class="block hover:text-gray-200"
+          >Destinations</a
+        >
+        <a href="panier.html" class="block hover:text-gray-200">Panier</a>
+        <a href="about.html" class="block hover:text-gray-200">À propos</a>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="p-6 max-w-3xl mx-auto mt-6">
+      <h1 class="text-3xl font-bold mb-4">À propos de Yobalou Vacance</h1>
+      <p class="text-gray-700 leading-relaxed">
+        Yobalou Vacance est une plateforme dédiée à la découverte et la
+        réservation de séjours au Sénégal. Notre mission est de vous offrir des
+        expériences uniques, allant des plages paradisiaques aux circuits
+        culturels, tout en facilitant vos réservations.
+      </p>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+      © 2025 Yobalou Vacance
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>
