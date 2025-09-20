@@ -52,7 +52,7 @@
       <!-- Menu Mobile -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-blue-700 px-6 pb-4 space-y-2 font-medium w-full"
+        class="hidden bg-blue-700 px-6 pb-4 space-y-2 font-medium w-full"
       >
         <a href="#" class="block hover:text-gray-200">Accueil</a>
         <a href="sejours.html" class="block hover:text-gray-200">Séjours</a>
@@ -103,12 +103,14 @@
         Découvrez nos séjours les plus appréciés par nos voyageurs. Profitez
         d’expériences uniques et inoubliables au Sénégal.
       </p>
+
+      <!-- Grille responsive : 1 colonne sur mobile, 3 sur md/lg -->
       <div
         id="sejours-populaires"
-        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4"
+        class="grid grid-cols-1 md:grid-cols-3 gap-4"
       ></div>
 
-      <!-- La section Destinations via XML/XSL peut être injectée ici -->
+      <!-- Destinations -->
       <div id="destinations" class="mt-10"></div>
     </main>
 
@@ -116,6 +118,7 @@
     <footer class="p-4 bg-gray-800 text-white text-center mt-10">
       © 2025 Yobalou Vacance
     </footer>
+
     <script src="js/app.js"></script>
   </body>
 </html>
