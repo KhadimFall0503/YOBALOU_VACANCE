@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Charger les destinations
   afficherDestinations();
+
+  // Afficher le panier si présent
+  if (document.getElementById("panier")) afficherPanier();
 });
 
 // Tableau de séjours
@@ -86,7 +89,6 @@ function afficherSejours(containerId, filterPopular = false) {
       <button onclick="addToCart('${sejour.id}','${sejour.destination}','${sejour.prix}')" 
         class="bg-blue-700 text-white px-3 py-1 rounded mt-2 hover:bg-green-500 transition">Réserver</button>
     `;
-
     container.appendChild(card);
   });
 }
@@ -107,13 +109,38 @@ function addToCart(id, destination, prix) {
   if (document.getElementById("panier")) afficherPanier();
 }
 
-// Afficher les destinations
+// Afficher le panier
+function afficherPanier() {
+  const container = document.getElementById("panier");
+  if (!container) return;
 
+  let panier = JSON.parse(localStorage.getItem("panier")) || [];
+  container.innerHTML = "";
+
+  if (panier.length === 0) {
+    container.innerHTML = "<p>Votre panier est vide.</p>";
+    return;
+  }
+
+  const ul = document.createElement("ul");
+  ul.className = "list-disc pl-6";
+
+  panier.forEach((item) => {
+    const li = document.createElement("li");
+    li.className = "mb-1";
+    li.textContent = `${item.destination} - ${item.prix} €`;
+    ul.appendChild(li);
+  });
+
+  container.appendChild(ul);
+}
+
+// Afficher les destinations en tableau Tailwind responsive
 function afficherDestinations() {
   const container = document.getElementById("destinations");
   if (!container) return;
 
-  fetch("Khadim_Fall/destinations.xml") // assure-toi que le chemin est correct
+  fetch("Khadim_Fall/destinations.xml")
     .then((response) => response.text())
     .then((str) => {
       const parser = new DOMParser();
@@ -122,6 +149,31 @@ function afficherDestinations() {
 
       container.innerHTML = "";
 
+      // Wrapper responsive : scroll sur mobile, centré et large sur md/lg
+      const wrapper = document.createElement("div");
+      wrapper.className =
+        "overflow-x-auto md:overflow-x-visible w-full md:max-w-screen-xl md:mx-auto ";
+      const table = document.createElement("table");
+      table.className =
+        "min-w-full divide-y divide-gray-200 border border-gray-200 rounded overflow-hidden shadow-lg";
+
+      // Entête
+      const thead = document.createElement("thead");
+      thead.className = "bg-blue-700";
+      thead.innerHTML = `
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Ville</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Région</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Description</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Attractions</th>
+        </tr>
+      `;
+      table.appendChild(thead);
+
+      // Corps
+      const tbody = document.createElement("tbody");
+      tbody.className = "bg-white divide-y divide-gray-200";
+
       Array.from(destinations).forEach((dest) => {
         const ville = dest.getElementsByTagName("ville")[0].textContent;
         const region = dest.getElementsByTagName("region")[0].textContent;
@@ -129,22 +181,75 @@ function afficherDestinations() {
           dest.getElementsByTagName("description")[0].textContent;
         const attractions =
           dest.getElementsByTagName("attractions")[0].textContent;
-        const image = dest.getElementsByTagName("image")[0].textContent;
 
-        const card = document.createElement("div");
-        card.className =
-          "border rounded shadow p-4 bg-white flex flex-col hover:shadow-lg transition";
-
-        card.innerHTML = `
-          <img src="${image}" alt="${ville}" class="w-full h-48 object-cover rounded"/>
-          <h3 class="text-lg font-bold mt-2">${ville}</h3>
-          <p class="text-gray-600 font-medium mt-1">${region}</p>
-          <p class="text-gray-700 mt-2">${description}</p>
-          <p class="text-gray-500 mt-1"><b>Attractions:</b> ${attractions}</p>
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="px-6 py-4 whitespace-nowrap text-gray-900">${ville}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-gray-900">${region}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-gray-900">${description}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-gray-900">${attractions}</td>
         `;
-
-        container.appendChild(card);
+        tbody.appendChild(tr);
       });
+
+      table.appendChild(tbody);
+      wrapper.appendChild(table);
+      container.appendChild(wrapper);
     })
     .catch((error) => console.error("Erreur lors du chargement XML:", error));
 }
+
+// Gestion du formulaire de contact avec utilisateurs.xml
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    const nom = form.querySelector('input[type="text"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const message = form.querySelector("textarea").value.trim();
+
+    if (!nom || !email || !message) {
+      alert("⚠️ Merci de remplir tous les champs !");
+      return;
+    }
+
+    // Charger et lire le fichier utilisateurs.xml
+    fetch("Khadim_Fall/utilisateurs.xml")
+      .then((res) => res.text())
+      .then((str) => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(str, "text/xml");
+        const utilisateurs = xml.getElementsByTagName("utilisateur");
+
+        let emailExiste = false;
+        let prenomTrouve = "";
+        let nomTrouve = "";
+
+        Array.from(utilisateurs).forEach((user) => {
+          const emailXML = user.getElementsByTagName("email")[0].textContent;
+          if (emailXML === email) {
+            emailExiste = true;
+            prenomTrouve = user.getElementsByTagName("prenom")[0].textContent;
+            nomTrouve = user.getElementsByTagName("nom")[0].textContent;
+          }
+        });
+
+        if (emailExiste) {
+          alert(
+            ` Merci ${prenomTrouve} ${nomTrouve}, votre message a bien été reçu :\n"${message}"`
+          );
+          form.reset();
+        } else {
+          alert(
+            "Email non reconnu dans notre base. Veuillez utiliser une adresse valide."
+          );
+        }
+      })
+      .catch((err) =>
+        console.error("Erreur lors de la lecture du fichier XML :", err)
+      );
+  });
+});

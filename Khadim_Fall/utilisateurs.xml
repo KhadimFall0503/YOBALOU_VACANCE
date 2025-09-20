@@ -4,6 +4,12 @@
     <id>1</id>
     <nom>Fall</nom>
     <prenom>Khadim</prenom>
-    <email>khadim@example.com</email>
+    <email>khadimfall0503@gmail.com</email>
+  </utilisateur>
+  <utilisateur>
+    <id>2</id>
+    <nom>Diop</nom>
+    <prenom>Aminata</prenom>
+    <email>aminatadiop12@gmail.com</email>
   </utilisateur>
 </utilisateurs>
